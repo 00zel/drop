@@ -1,0 +1,19 @@
+d1 $ every 3 (rev) $ up (run 8) |=| sound "arpy*4" # gain 0.9 # crush "5"
+
+
+hush
+d1 $ n (run 16) s "arpy*4"
+
+d1 $ cat [sound "arpy*4 arpy*4",
+          sound "bd bd bd",
+          sound "808cy 808cy 808cy 808cy"
+         ]
+
+         d2 $ every 2 (rev) $ sound "diphone"(16,16)" # up (run 10)
+
+         d1 $ sound "808bd:05*2" # shape 0.9 # orbit 1
+         d2 $ striate' 8 0.2 $ sound "moog arpy(5,8)"
+           # end 0.5 # up "[8 4 1 6]/16" # gain 0.55 # crush 4
+           # delay 0.5 # delaytime 0.25 # delayfeedback 0.5
+
+           hush
