@@ -1,0 +1,22 @@
+//hush
+
+cps (-1)
+
+d1 $ seqPLoop [
+(0, 1, sound "feelfx feelfx"),
+(1, 2, sound "feelfx*2" # up (run "10")),
+(2, 4, sound "feelfx feelfx feelfx feelfx" # up (run "18")),
+(4, 8, sound "feelfx*0.5 feelfx*0.5 feelfx feelfx*4"),
+(8, 9, sound "feelfx feelfx"),
+(9, 10, sound "feelfx*2" # up (run "12")),
+(10, 12, sound "feelfx feelfx feelfx feelfx" # up (run "20")),
+(20, 32, sound "bev*2" # gain "0.8"),
+(30, 34, sound "[alphabet:25, alphabet:25 alphabet:4, alphabet:25 alphabet:4 alphabet:11, alphabet:25 alphabet:4 alphabet:11]" # gain "0.7" # pan sine),
+(34, 38, sound "[alphabet:8, alphabet:8 alphabet,alphabet:8 alphabet alphabet:11, alphabet:8 alphabet alphabet:13, alphabet:8]"  # gain "0.7" # pan sine),
+(38, 42, sound "[alphabet:19, alphabet:19 alphabet:17, alphabet:19 alphabet:17 alphabet:24, alphabet:19 alphabet:17 alphabet:24]"  # gain "0.7" # pan sine),
+(38, 42, sound "popkick popkick*2 popkick kurt" #up (run "16")),
+(41, 50, slow 8 $ sound "[rave:7, popkick]*8"),
+(60, 80, sound "[sundance sundance*10 sundance*5 sundance*3]")
+]
+
+cps 1
